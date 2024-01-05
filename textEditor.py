@@ -35,7 +35,7 @@ def saveFile():
         try:
             window.title(os.path.basename(file))
             file = open(file, "w")
-            file.write(text.get(1.0, END))
+            file.write(text.get(1.0, END).removesuffix("\n"))
         except:
             print("Error while saving")
             window.title("Untitled")
